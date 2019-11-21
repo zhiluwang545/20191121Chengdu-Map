@@ -1,0 +1,62 @@
+<html>
+
+<head>
+<title>My Mapbox GL JS Map Dog</title>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet' />
+<link rel="stylesheet" href="map.css">
+</head>
+
+<body>
+<div id="map"></div>
+</body>
+<script src="map.js"></script>
+</html>
+
+<!-- Map sidebar --> 
+  <div id="sidebar">
+    <div>
+      <h1 class='page-title'>Explore Charlottesville</h1>
+      <!-- About this map button -->
+      <button id="about" class='button-default'><i class="fas fa-question-circle"></i>&nbsp;About this map</button>
+      <!-- Info window (populated by javascript code from the Mapbox map layers) -->
+      <div id='info-window'>
+        <div>
+          <div id='info-window-body'>
+            <p>Hover over a park or click on a bus stop to learn more about it.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Scrolling chapters (populated by javascript code from the Mapbox map layers) -->
+      <div id="chapters"></div>
+    </div>
+  </div>
+
+  
+  <!-- The map will be added to this div by javascript --> 
+  <div id="map-parent">
+    <div id="map"></div>
+
+    <!-- Map overlay sidebar -->
+    <div id='map-sidebar'>
+      <!-- Layers control (populated by javascript code) -->
+      <div id='layers-control'>
+        <h3>Show/Hide Layers:</h3>
+      </div>
+
+      <!-- color change selector -->
+      <div id='color-changer'>
+        <div>
+          <label>Bus Stop Color:</label>
+          <div id='swatches'></div>
+        </div>
+      </div>
+
+      <!-- Map legend (populated by javascript code) -->
+      <div id='legend'></div>
+
+      <!-- Reset Map button -->
+      <button id="reset" class='button-default'><i class="fas fa-redo"></i></i>&nbsp;Reset map</button>
+    </div>
+  </div>
+
